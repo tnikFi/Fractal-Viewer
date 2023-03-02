@@ -1,10 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using System.Threading.Tasks;
+using UnityEngine;
 
 public class ScreenDrawer : MonoBehaviour
 {
     public Texture2D pixelTexture;
     public TextureProvider textureProvider;
     public ColorProvider colorProvider;
+    
+    private RenderTexture _destination;
 
     void Start()
     {
@@ -21,16 +26,21 @@ public class ScreenDrawer : MonoBehaviour
         }
     }
 
-    // Render the texture on the render texture
-    void OnRenderImage(RenderTexture source, RenderTexture destination)
+    public void Render()
     {
         // Get the texture from the provider
         var texture = textureProvider.GetTexture(pixelTexture.width, pixelTexture.height, colorProvider);
-        
+
         // Set the pixels of the texture
         pixelTexture.SetPixels(texture);
         pixelTexture.Apply();
-        
-        Graphics.Blit(pixelTexture, destination);
+
+        Graphics.Blit(pixelTexture, _destination);
+    }
+
+    private void OnRenderImage(RenderTexture src, RenderTexture dest)
+    {
+        _destination = dest;
+        Render();
     }
 }

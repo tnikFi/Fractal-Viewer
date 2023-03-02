@@ -7,9 +7,11 @@ public class ColorProvider : MonoBehaviour
     public double scale = 1;
     public double xOffset = 0;
     public double yOffset = 0;
+    public Gradient gradient;
+    public int maxIterations = 100;
 
     // Calculate whether a point is in the Mandelbrot set. More iterations give a more accurate result, but take longer.
-    public int CalculateMandelbrotIterations(float x, float y, int maxIterations)
+    public int CalculateMandelbrotIterations(float x, float y)
     {
         var relativeXCentered = (x / Screen.width - 0.5f) * 2;
         var relativeYCentered = (y / Screen.height - 0.5f) * 2;
@@ -36,8 +38,8 @@ public class ColorProvider : MonoBehaviour
     
     public Color GetColor(int x, int y)
     {
-        var iterations = CalculateMandelbrotIterations(x, y, 50);
-        var color = new Color(iterations / 50f, 0, 0);
+        var iterations = CalculateMandelbrotIterations(x, y);
+        var color = gradient.Evaluate(iterations / (float)maxIterations);
         return color;
     }
 }
