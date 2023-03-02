@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TextureProvider : MonoBehaviour
 {
-    public Color[] GetTexture(int width, int height)
+    public Color[] GetTexture(int width, int height, ColorProvider colorProvider)
     {
         var result = new Color[width * height];
 
@@ -12,7 +12,7 @@ public class TextureProvider : MonoBehaviour
         {
             var x = i % width;
             var y = i / width;
-            var color = new Color(x / (float)width, y / (float)height, 0);
+            var color = colorProvider.GetColor(x, y);
             result[i] = color;
         });
         

@@ -4,6 +4,7 @@ public class ScreenDrawer : MonoBehaviour
 {
     public Texture2D pixelTexture;
     public TextureProvider textureProvider;
+    public ColorProvider colorProvider;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class ScreenDrawer : MonoBehaviour
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         // Get the texture from the provider
-        var texture = textureProvider.GetTexture(pixelTexture.width, pixelTexture.height);
+        var texture = textureProvider.GetTexture(pixelTexture.width, pixelTexture.height, colorProvider);
         
         // Set the pixels of the texture
         pixelTexture.SetPixels(texture);
