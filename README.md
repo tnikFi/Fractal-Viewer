@@ -1,6 +1,6 @@
 # Fractal Viewer
 
-A simple fractal viewing program written in C# using the Unity game engine.
+A simple fractal viewing program written in C# using the Unity game engine. Renders a fractal on the screen and allows the user to zoom and pan around the fractal.
 
 ## Planned changes
 
