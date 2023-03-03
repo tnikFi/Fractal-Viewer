@@ -71,15 +71,15 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Scale: 0.013298598
+    - _Scale: 1.2526761
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _XOffset: -0.10500952
+    - _XOffset: -0.28887585
     - _XOffsetHigh: 0
     - _XOffsetLow: 0
-    - _YOffset: 0.9252925
+    - _YOffset: -0.057660207
     - _YOffsetHigh: 0
     - _YOffsetLow: 0
     - _ZWrite: 1

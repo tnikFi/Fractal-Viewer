@@ -77,6 +77,10 @@ Shader "Custom/FractalShader"
                 const float2 c = (uv - 0.5) * float2(_Scale * _Aspect, _Scale) + float2(_XOffset, _YOffset);
                 const int iter = Mandelbrot(c);
                 float value = (float)iter / (float)_MaxIter;
+                if (value >= 0.9)
+                {
+                    value = -9 * value + 9;
+                }
                 return float4(log2(value + 1), pow(value, 2), pow(value, 2), 1.0);
             }
             ENDCG
