@@ -58,7 +58,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Aspect: 1.8420329
+    - _Aspect: 2.0333598
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -71,15 +71,15 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Scale: 4
+    - _Scale: 0.013298598
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _XOffset: 0
+    - _XOffset: -0.10500952
     - _XOffsetHigh: 0
     - _XOffsetLow: 0
-    - _YOffset: 0
+    - _YOffset: 0.9252925
     - _YOffsetHigh: 0
     - _YOffsetLow: 0
     - _ZWrite: 1
