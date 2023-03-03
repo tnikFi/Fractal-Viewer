@@ -1,5 +1,7 @@
 # Fractal Viewer
 
+[![Actions](https://github.com/tnikFi/Fractal-Viewer/actions/workflows/main.yml/badge.svg)](https://github.com/tnikFi/Fractal-Viewer/actions/workflows/main.yml)
+
 A simple fractal viewing program written in C# using the Unity game engine. Renders a fractal on the screen and allows the user to zoom and pan around the fractal.
 
 ## Planned changes
