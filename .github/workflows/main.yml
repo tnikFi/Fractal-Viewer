@@ -39,7 +39,16 @@ jobs:
         with:
           targetPlatform: WebGL
 
-      # Output
+      # Upload to Itch
+      - uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: html5
+          ITCH_GAME: ${{ secrets.ITCH_GAME }}
+          ITCH_USER: ${{ secrets.ITCH_USER }}
+          PACKAGE: build/WebGL
+
+      # Upload artifact
       - uses: actions/upload-artifact@v2
         with:
           name: Build
